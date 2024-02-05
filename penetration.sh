@@ -24,6 +24,4 @@ mv ./go/bin/gobuster /usr/local/bin
 # Update pip
 python3 -m pip install --upgrade pip
 
-# Update pwncat-cs
-pip3 install pwncat-cs
 
