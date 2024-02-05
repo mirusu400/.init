@@ -17,6 +17,8 @@ sudo apt-get install golang-go -y
 # Install feroxbuster
 sudo apt install -y feroxbuster
 
+sudo apt-get install -y fzf
+
 # Install gobuster
 go install github.com/OJ/gobuster/v3@latest
 mv ./go/bin/gobuster /usr/local/bin
