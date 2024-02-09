@@ -2,8 +2,8 @@
 
 
 # Korean support
-echo "deb-src http://ftp.harukasan.org/kali kali-rolling main non-free contrib" >> /etc/apt/sources.list
-echo "deb http://ftp.harukasan.org/kali kali-rolling main non-free contrib" >> /etc/apt/sources.list
+sudo echo "deb-src http://ftp.harukasan.org/kali kali-rolling main non-free contrib" >> /etc/apt/sources.list
+sudo echo "deb http://ftp.harukasan.org/kali kali-rolling main non-free contrib" >> /etc/apt/sources.list
 
 sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get clean
 sudo apt update
