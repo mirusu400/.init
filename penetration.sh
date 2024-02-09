@@ -10,7 +10,7 @@ sudo apt update
 sudo apt-get install fcitx-hangul -y
 sudo apt-get install fcitx-lib* -y
 sudo apt-get install fonts-nanum* -y
-
+sudo apt-get install python3.11-venv
 # Install golang
 sudo apt-get install golang-go -y
 
@@ -25,5 +25,12 @@ mv ./go/bin/gobuster /usr/local/bin
 
 # Update pip
 python3 -m pip install --upgrade pip
+
+python3 -m venv venv
+source venv/bin/activate
+pip3 install pwncat-cs
+
+
+
 
 
