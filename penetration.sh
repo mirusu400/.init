@@ -31,7 +31,7 @@ source venv/bin/activate
 pip3 install pwncat-cs
 
 # Install rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sudo sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
 git clone https://github.com/RustScan/RustScan
 cd RustScan
