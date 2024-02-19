@@ -5,12 +5,12 @@
 echo "deb-src http://ftp.harukasan.org/kali kali-rolling main non-free contrib" | sudo tee -a /etc/apt/sources.list
 echo "deb http://ftp.harukasan.org/kali kali-rolling main non-free contrib"| sudo tee -a /etc/apt/sources.list
 
-sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade && sudo apt-get autoremove && sudo apt-get clean
+sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y && sudo apt-get clean
 sudo apt update
 sudo apt-get install fcitx-hangul -y
 sudo apt-get install fcitx-lib* -y
 sudo apt-get install fonts-nanum* -y
-sudo apt-get install python3.11-venv
+sudo apt-get install python3.11-venv -y
 # Install golang
 sudo apt-get install golang-go -y
 
