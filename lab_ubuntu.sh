@@ -1,5 +1,4 @@
 sudo apt-get -y update
-sudo snap install code
 sudo snap install slack
 sudo snap install discord
 sudo apt-get -y install gnome-tweak-tool
@@ -10,6 +9,11 @@ sudo apt-get -y install curl
 sudo apt-get -y install wget
 git config --global user.name "mirusu400"
 git config --global user.email "mirusu400@naver.com"
+
+# install code
+URL="https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"; wget "$URL" -O code.deb
+sudo dpkg -i ./code.deb
+sudo apt -f install
 
 # install chrome
 sudo apt-get install libxss1 libappindicator1 libindicator7
