@@ -7,12 +7,13 @@ echo "deb http://ftp.harukasan.org/kali kali-rolling main non-free contrib"| sud
 
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y && sudo apt-get clean
 sudo apt update
-sudo apt-get install fcitx-hangul -y
-sudo apt-get install fcitx-lib* -y
-sudo apt-get install fonts-nanum* -y
-sudo apt-get install python3.11-venv -y
+sudo apt-get install -y wget
+sudo apt-get install -y fcitx-hangul
+sudo apt-get install -y fcitx-lib*
+sudo apt-get install -y fonts-nanum*
+sudo apt-get install -y python3.11-venv 
 # Install golang
-sudo apt-get install golang-go -y
+sudo apt-get install -y golang-go
 
 # Install feroxbuster
 sudo apt install -y feroxbuster
@@ -62,4 +63,10 @@ echo "export PATH=/home/`whoami`/.local/bin:$PATH\n" >> ~/.bashrc
 . ~/.bashrc
 
 
+wget -O mullvad_vpn.deb https://mullvad.net/en/download/app/deb/latest
+sudo dpkg -i mullvad_vpn.deb
+rm -rf mullvad_vpn.deb
+
+wget -O mullvad.tar.gz https://mullvad.net/en/download/browser/linux-x86_64/latest
+tar -xvf mullvad.tar.gz
 
