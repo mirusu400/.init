@@ -37,7 +37,8 @@ source "$HOME/.cargo/env"
 git clone https://github.com/RustScan/RustScan
 cd RustScan
 cargo build --release
-sudo ln -s ~/RustScan/target/release/rustscan /usr/bin/rustscan
+sudo cp ~/RustScan/target/release/rustscan /usr/bin/rustscan
+sudo chmod +x /usr/bin/rustscan
 
 # Install volatility2
 sudo apt install -y python2 python2.7-dev libpython2-dev
