@@ -71,3 +71,17 @@ rm -rf mullvad_vpn.deb
 wget -O mullvad.tar.gz https://mullvad.net/en/download/browser/linux-x86_64/latest
 tar -xvf mullvad.tar.gz
 
+
+# Install custom scripts
+mkdir -p ~/scripts
+cp scripts/xfreerdp3.sh ~/scripts/xfreerdp3.sh
+chmod +x ~/scripts/xfreerdp3.sh
+
+cp scripts/feroxbuster.sh ~/scripts/feroxbuster.sh
+chmod +x ~/scripts/feroxbuster.sh
+
+
+
+
+
+
