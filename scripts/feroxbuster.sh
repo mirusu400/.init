@@ -16,5 +16,6 @@ if [ -z "$WORDLIST" ]; then
     echo "기본 워드리스트 사용: $WORDLIST"
 fi
 
+echo "feroxbuster -u $URL -w $WORDLIST -t 40 -x php,html,txt,json -o result_$(date +%s).txt"
 # feroxbuster 실행
 feroxbuster -u "$URL" -w "$WORDLIST" -t 40 -x php,html,txt,json -o result_$(date +%s).txt

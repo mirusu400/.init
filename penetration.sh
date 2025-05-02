@@ -64,6 +64,8 @@ echo "export PATH=/home/`whoami`/.local/bin:$PATH\n" >> ~/.bashrc
 . ~/.bashrc
 
 
+
+# install mullvad ~lenny~
 wget -O mullvad_vpn.deb https://mullvad.net/en/download/app/deb/latest
 sudo dpkg -i mullvad_vpn.deb
 rm -rf mullvad_vpn.deb
@@ -81,7 +83,9 @@ cp scripts/feroxbuster.sh ~/scripts/feroxbuster.sh
 chmod +x ~/scripts/feroxbuster.sh
 
 
-
+# install bloodhound (kali-only)
+sudo apt-get install -y bloodhound
+sudo bloodhound-setup
 
 
 
