@@ -26,4 +26,9 @@ winget install --id=Python.Python.3.12  -e
 winget install --id=Anysphere.Cursor  -e
 winget install --id=OpenJS.NodeJS  -e
 winget install --id=Docker.DockerDesktop  -e
+
 winget install --id=Oracle.JDK.21 -e
+# I love it
+winget install -e --id ShareX.ShareX
+
+# TODO Install: MobaXterm, Navicat, Apache, php, etc..
