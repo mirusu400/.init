@@ -31,4 +31,8 @@ winget install --id=Oracle.JDK.21 -e
 # I love it
 winget install -e --id ShareX.ShareX
 
+# I hate it
+winget install -e --id Notion.Notion
+
 # TODO Install: MobaXterm, Navicat, Apache, php, etc..
+
