@@ -27,9 +27,15 @@ mv ./go/bin/gobuster /usr/local/bin
 # Update pip
 python3 -m pip install --upgrade pip
 
-python3 -m venv venv
-source venv/bin/activate
-pip3 install pwncat-cs
+
+# python3 -m venv venv
+# source venv/bin/activate
+
+# Instead install pwncat-cs I'll install pwncat-lv cause its better
+# pip3 install pwncat-cs
+sudo apt install pipx
+pipx ensurepath
+pipx install git+https://github.com/Chocapikk/pwncat-vl
 
 # Install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
