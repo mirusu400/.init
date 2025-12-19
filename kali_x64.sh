@@ -37,9 +37,25 @@ sudo apt install pipx
 pipx ensurepath
 pipx install git+https://github.com/Chocapikk/pwncat-vl
 
+# Install pwncat-cs with python 3.11
+# Install python 3.11
+sudo apt install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
+cd /tmp
+wget https://www.python.org/ftp/python/3.11.9/Python-3.11.9.tgz
+tar -xf Python-3.11.9.tgz
+cd Python-3.11.9
+./configure --enable-optimizations
+make -j$(nproc)
+sudo make altinstall
+
+# Install pwncat-cs
+pipx install pwncat-cs --python python3.11
+
 # Install rust
+cd ~
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
+
 git clone https://github.com/RustScan/RustScan
 cd RustScan
 cargo build --release
