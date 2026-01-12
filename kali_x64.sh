@@ -51,6 +51,9 @@ sudo make altinstall
 # Install pwncat-cs
 pipx install pwncat-cs --python python3.11
 
+# Install uvx for installing subsurfer
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
 # Install rust
 cd ~
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
