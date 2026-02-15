@@ -88,6 +88,8 @@ uv pip install "setuptools<70.0.0"
 deactivate
 ln -sf ~/.pwncat-env/.venv/bin/pwncat-vl ~/.local/bin/pwncat-vl
 
+sudo tar -xvf /usr/share/seclists/Passwords/Leaked-Databases/rockyou.txt.tar -C /usr/share/seclists/Passwords/Leaked-Databases/
+
 ###################################
 # x86_64 specific installations
 ###################################
