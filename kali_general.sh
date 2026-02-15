@@ -26,6 +26,7 @@ mv ./go/bin/gobuster /usr/local/bin
 
 # Update pip
 python3 -m pip install --upgrade pip
+pip3 install 
 
 
 # python3 -m venv venv
@@ -49,7 +50,8 @@ make -j$(nproc)
 sudo make altinstall
 
 # Install pwncat-cs
-pipx install git+https://github.com/Chocapikk/pwncat-vl --python python3.11
+# It doesnt work fy
+# pipx install git+https://github.com/Chocapikk/pwncat-vl --python $(which python3.11)
 
 # Install uvx for installing subsurfer
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -72,6 +74,9 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # Install enum4linux-ng
 uv tool install git+https://github.com/cddmp/enum4linux-ng
+
+# Install pwncat-vl
+uv tool install git+https://github.com/Chocapikk/pwncat-vl --python 3.10
 
 ###################################
 # x86_64 specific installations
@@ -113,7 +118,7 @@ elif [ "$ARCH" = "aarch64" ]; then
     # Install vmtools
     sudo apt install -y --reinstall open-vm-tools-desktop fuse
 
-else
+fi
 
 
 # Install custom scripts
