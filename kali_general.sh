@@ -76,7 +76,17 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 uv tool install git+https://github.com/cddmp/enum4linux-ng
 
 # Install pwncat-vl
-uv tool install git+https://github.com/Chocapikk/pwncat-vl --python 3.10
+# uv tool install git+https://github.com/Chocapikk/pwncat-vl --python 3.10
+mkdir -p ~/.pwncat-env
+cd ~/.pwncat-env
+
+uv venv --python 3.10
+source .venv/bin/activate
+uv pip install setuptools git+https://github.com/Chocapikk/pwncat-vl
+uv pip install --force-reinstall ZODB ZEO zope.interface zope.proxy zodburi
+uv pip install "setuptools<70.0.0"
+deactivate
+ln -sf ~/.pwncat-env/.venv/bin/pwncat-vl ~/.local/bin/pwncat-vl
 
 ###################################
 # x86_64 specific installations
