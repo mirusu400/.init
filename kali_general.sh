@@ -157,14 +157,14 @@ chmod +x ~/scripts/feroxbuster.sh
 
 
 # Make no sleep
-xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/blank-on-ac -s 0
-xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-sleep -s 0
-xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-off -s 0
-xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/lock-screen-suspend-hibernate -s false
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/blank-on-ac -n -t int -s 0
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-sleep -n -t int -s 0
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-off -n -t int -s 0
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/lock-screen-suspend-hibernate -n -t bool -s false
 
 # Xfce Screensaver
-xfconf-query -c xfce4-screensaver -p /saver/enabled -s false
-xfconf-query -c xfce4-screensaver -p /lock/enabled -s false
+xfconf-query -c xfce4-screensaver -p /saver/enabled -n -t bool -s false
+xfconf-query -c xfce4-screensaver -p /lock/enabled -n -t bool -s false
 
 # Disable DPMS (Display Power Management Signaling)
 xset s off
