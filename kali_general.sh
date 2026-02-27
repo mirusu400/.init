@@ -34,9 +34,9 @@ pip3 install
 
 # Instead install pwncat-cs I'll install pwncat-lv cause its better
 # pip3 install pwncat-cs
-sudo apt install pipx
-pipx ensurepath
-pipx install git+https://github.com/Chocapikk/pwncat-vl
+# sudo apt install pipx
+# pipx ensurepath
+# pipx install git+https://github.com/Chocapikk/pwncat-vl
 
 # Install pwncat-cs with python 3.11
 # Install python 3.11
@@ -49,12 +49,9 @@ cd Python-3.11.9
 make -j$(nproc)
 sudo make altinstall
 
-# Install pwncat-cs
-# It doesnt work fy
-# pipx install git+https://github.com/Chocapikk/pwncat-vl --python $(which python3.11)
-
 # Install uvx for installing subsurfer
 curl -LsSf https://astral.sh/uv/install.sh | sh
+
 
 # Install rust
 cd ~
@@ -71,6 +68,9 @@ sudo chmod +x /usr/bin/rustscan
 # Install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
+
+# Install subsurfer
+uv tool install git+https://github.com/mirusu400/SubSurfer.git
 
 # Install enum4linux-ng
 uv tool install git+https://github.com/cddmp/enum4linux-ng
