@@ -5,7 +5,7 @@
 echo "deb-src http://ftp.harukasan.org/kali kali-rolling main non-free contrib" | sudo tee -a /etc/apt/sources.list
 echo "deb http://ftp.harukasan.org/kali kali-rolling main non-free contrib"| sudo tee -a /etc/apt/sources.list
 
-sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove -y && sudo apt-get clean
+sudo apt update && sudo apt full-upgrade -y && sudo apt autoremove -y
 sudo apt update
 sudo apt-get install -y wget
 sudo apt-get install -y fcitx-hangul
