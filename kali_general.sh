@@ -172,6 +172,39 @@ xset s noblank
 xset -dpms
 
 
+# Change keyboard to hangul (Experimental!)
+# 2. Generate and Set Locale to UTF-8 (Crucial step to prevent crashes)
+sudo locale-gen ko_KR.UTF-8
+sudo update-locale LANG=ko_KR.UTF-8
+
+# 3. Set Input Method to Fcitx (Non-interactive)
+im-config -n fcitx
+
+# 4. Create Environment Variables (Using printf to avoid encoding issues)
+cat <<EOF > ~/.xprofile
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+EOF
+
+# 5. Initialize Fcitx Config Directories
+mkdir -p ~/.config/fcitx
+
+# 6. Set Input Method Order (English first, then Hangul)
+# Note: "hangul" is the internal name, no actual Korean characters used here.
+cat <<EOF > ~/.config/fcitx/profile
+[Profile]
+EnabledIMList=fcitx-keyboard-us:True,hangul:True
+DefaultIM=fcitx-keyboard-us
+EOF
+
+# 7. Set 'Shift+Space' as the Toggle Key
+cat <<EOF > ~/.config/fcitx/config
+[Hotkey]
+TriggerKey=SHIFT_SPACE
+SwitchKey=
+EOF
+
 # install bloodhound (kali-only)
 sudo apt-get install -y bloodhound
 sudo bloodhound-setup
