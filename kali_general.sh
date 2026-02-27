@@ -71,7 +71,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 
 # Install subsurfer
-uv tool install git+https://github.com/mirusu400/SubSurfer.git
+
 
 # Install enum4linux-ng
 uv tool install git+https://github.com/cddmp/enum4linux-ng
@@ -88,6 +88,19 @@ uv pip install --force-reinstall ZODB ZEO zope.interface zope.proxy zodburi
 uv pip install "setuptools<70.0.0"
 deactivate
 ln -sf ~/.pwncat-env/.venv/bin/pwncat-vl ~/.local/bin/pwncat-vl
+
+sudo tar -xvf /usr/share/seclists/Passwords/Leaked-Databases/rockyou.txt.tar -C /usr/share/seclists/Passwords/Leaked-Databases/
+
+
+mkdir -p ~/.subsurfer-env
+cd ~/.subsurfer-env
+
+uv venv --python 3.10
+source .venv/bin/activate
+uv pip install setuptools git+https://github.com/mirusu400/SubSurfer.git
+uv pip install "setuptools<70.0.0"
+deactivate
+ln -sf ~/.subsurfer-env/.venv/bin/subsurfer ~/.local/bin/subsurfer
 
 sudo tar -xvf /usr/share/seclists/Passwords/Leaked-Databases/rockyou.txt.tar -C /usr/share/seclists/Passwords/Leaked-Databases/
 
