@@ -156,6 +156,22 @@ cp scripts/feroxbuster.sh ~/scripts/feroxbuster.sh
 chmod +x ~/scripts/feroxbuster.sh
 
 
+# Make no sleep
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/blank-on-ac -s 0
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-sleep -s 0
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/dpms-on-ac-off -s 0
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/lock-screen-suspend-hibernate -s false
+
+# Xfce Screensaver
+xfconf-query -c xfce4-screensaver -p /saver/enabled -s false
+xfconf-query -c xfce4-screensaver -p /lock/enabled -s false
+
+# Disable DPMS (Display Power Management Signaling)
+xset s off
+xset s noblank
+xset -dpms
+
+
 # install bloodhound (kali-only)
 sudo apt-get install -y bloodhound
 sudo bloodhound-setup
