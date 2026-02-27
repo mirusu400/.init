@@ -56,7 +56,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 # Install rust
 cd ~
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-source "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
 
 git clone https://github.com/RustScan/RustScan
 cd RustScan
