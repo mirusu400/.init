@@ -12,6 +12,7 @@ sudo apt-get install -y fcitx-hangul
 sudo apt-get install -y fcitx-lib*
 sudo apt-get install -y fonts-nanum*
 sudo apt-get install -y python3.11-venv 
+sudo apt-get install -y burpsuite
 # Install golang
 sudo apt-get install -y golang-go
 
