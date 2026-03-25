@@ -1,0 +1,1 @@
+pip install frida==16.7.19 frida-tools==13.7.1 mcp pillow pywin32
