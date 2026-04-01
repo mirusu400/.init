@@ -29,6 +29,9 @@ mv ./go/bin/gobuster /usr/local/bin
 python3 -m pip install --upgrade pip
 pip3 install 
 
+# Set feroxbuster alias
+grep -qF 'alias feroxbuster=' ~/.bashrc || echo "alias feroxbuster='feroxbuster --filter-status=404,403 --timeout=10 --rate-limit 3'" >> ~/.bashrc
+
 
 # python3 -m venv venv
 # source venv/bin/activate
