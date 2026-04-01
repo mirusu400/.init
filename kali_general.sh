@@ -30,7 +30,7 @@ python3 -m pip install --upgrade pip
 pip3 install 
 
 # Set feroxbuster alias
-grep -qF 'alias feroxbuster=' ~/.bashrc || echo "alias feroxbuster='feroxbuster --filter-status=404,403 --timeout=10 --rate-limit 3'" >> ~/.bashrc
+grep -qF 'alias feroxbuster=' ~/.zshrc || echo "alias feroxbuster='feroxbuster --filter-status=404,403 --timeout=10 --rate-limit 3'" >> ~/.zshrc
 
 
 # python3 -m venv venv
@@ -132,8 +132,8 @@ if [ "$ARCH" = "x86_64" ]; then
     python3 -m pip install -U distorm3 yara pycrypto pillow openpyxl ujson pytz ipython capstone
     python3 -m pip install -U git+https://github.com/volatilityfoundation/volatility3.git
 
-    echo "export PATH=/home/`whoami`/.local/bin:$PATH\n" >> ~/.bashrc
-    . ~/.bashrc
+    echo "export PATH=/home/`whoami`/.local/bin:$PATH\n" >> ~/.zshrc
+    . ~/.zshrc
 
     # install mullvad ~lenny~
     wget -O mullvad_vpn.deb https://mullvad.net/en/download/app/deb/latest
