@@ -51,6 +51,13 @@ sudo make altinstall
 # Install uvx for installing subsurfer
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
+# Install node
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+nvm install 24
 
 # Install rust
 cd ~
@@ -130,6 +137,16 @@ if [ "$ARCH" = "x86_64" ]; then
     echo "export PATH=/home/`whoami`/.local/bin:$PATH\n" >> ~/.zshrc
     . ~/.zshrc
 
+    echo "[*] Installing Google Chrome for x86_64..."
+    wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    sudo apt install -y ./google-chrome-stable_current_amd64.deb
+    rm google-chrome-stable_current_amd64.deb
+
+    echo "[*] Installing VS Code for x86_64..."
+    wget -O vscode_amd64.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
+    sudo apt install -y ./vscode_amd64.deb
+    rm vscode_amd64.deb
+    
     # install mullvad ~lenny~
     wget -O mullvad_vpn.deb https://mullvad.net/en/download/app/deb/latest
     sudo dpkg -i mullvad_vpn.deb
@@ -141,7 +158,11 @@ if [ "$ARCH" = "x86_64" ]; then
 elif [ "$ARCH" = "aarch64" ]; then
     # Install vmtools
     sudo apt install -y --reinstall open-vm-tools-desktop fuse
-
+    
+    echo "[*] Installing VS Code for aarch64..."
+    wget -O vscode_arm64.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-arm64"
+    sudo apt install -y ./vscode_arm64.deb
+    rm vscode_arm64.deb
 fi
 
 
