@@ -178,6 +178,9 @@ sudo update-locale LANG=ko_KR.UTF-8
 # 3. Set Input Method to Fcitx (Non-interactive)
 im-config -n fcitx
 
+# screenshot Alt Shift 4
+xfconf-query -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt><Shift>4" -n -t string -s "xfce4-screenshooter -r"
+
 # 4. Create Environment Variables (Using printf to avoid encoding issues)
 cat <<EOF > ~/.xprofile
 export GTK_IM_MODULE=fcitx
