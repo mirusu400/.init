@@ -24,7 +24,9 @@ winget install --id=Microsoft.VisualStudioCode  -e
 winget install --id=Microsoft.VCRedist.2013.x64  -e
 winget install --id=Microsoft.VCRedist.2013.x86  -e
 winget install --id=Python.Python.3.12  -e
-winget install --id=Anysphere.Cursor  -e
+
+# I hate it, use claude code :D
+# winget install --id=Anysphere.Cursor  -e
 winget install --id=OpenJS.NodeJS  -e
 winget install --id=Docker.DockerDesktop  -e
 
@@ -32,8 +34,8 @@ winget install --id=Oracle.JDK.21 -e
 # I love it
 winget install -e --id ShareX.ShareX
 
-# I hate it
-winget install -e --id Notion.Notion
+# I hate it, just use obsidian :D
+# winget install -e --id Notion.Notion
 
 # TODO Install: MobaXterm, Navicat, Apache, php, etc..
 
